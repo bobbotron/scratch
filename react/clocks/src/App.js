@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import ZonedClock from './ZonedClock.js';
+import ZonedClockCollection from './ZonedClockCollection.js';
 
 function App() {
   return (
     <div className="App">
       <h1 className="header">World Times</h1>
+
+        <ZonedClockCollection zones={['America/New_York',
+        'America/Los_Angeles',
+        'America/Chicago',
+        'UTC',
+        'Europe/Zagreb']} />
+
+        
       <div className="clock-container">
-        <ZonedClock tz="America/New_York" />
-        <ZonedClock tz="America/Los_Angeles" />
-        <ZonedClock tz="America/Chicago" />
-        <ZonedClock tz="UTC" />
-        <ZonedClock tz="Europe/Zagreb" />
       </div>
     </div>
   );
